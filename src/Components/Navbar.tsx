@@ -38,7 +38,7 @@ const Navbar = () =>{
         </ul>
         <form className="d-flex align-items-center nav_last" role="search">
              <FaShoppingCart size="30px" />
-          <button className="btn1" type="button">
+          <button className="btn1" type="button" >
             Order
           </button>
         </form>
