@@ -1,40 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-  
 
 .Home {
     width: 100%;
     padding-top: 5rem;
   padding-right: 5rem;
   padding-left: 5rem;
+  padding-bottom: 5rem;
   margin-right: auto;
   margin-left: auto;
   background-image: url('../assets/cake.jpg');
 }
-.btn_breakfast{
-    padding: 2rem 2rem 1.5rem 2rem;
+.btn_menu{
+    padding: 15px;
     border-radius: 5px 10px;
-    border: solid black
+    border: solid black;
+    font-family: "Pacifico";
+    font-size: 20px;
+    width: 30%; 
+}
+@media screen and (max-width: 430px) {
+    .btn_menu{
+        padding: 15px;
+        border-radius: 5px 10px;
+        border: solid black;
+        font-family: "Pacifico";
+        font-size: 20px;
+        width: 70%; 
+    }
     
 }
-.btn_breakfast span{
-    padding-left: 75px;
-    font-family: "Pacifico";
-    font-size: 30px;
 
-}
-.btn_lunch{
-    padding: 2rem 2rem 1.5rem 2rem;
-    border-radius: 5px 10px;
-    border: solid black
-}
-.btn_lunch span{
-    padding-left: 80px;
-    padding-right: 3rem;
-    font-family: "Pacifico";
-    font-size: 30px;
 
+.nav-item{
+    padding: 5px;
 }
+.nav_last{
+    padding-left: 2rem;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+  }
 .d-grid{
     row-gap: 5rem;
 }
