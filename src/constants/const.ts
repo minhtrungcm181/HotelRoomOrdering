@@ -1,0 +1,1 @@
+export const FOOD_API = 'https://api.cloudinary.com/v1_1/dm4djc1b1/image/upload';

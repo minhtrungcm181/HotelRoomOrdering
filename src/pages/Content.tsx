@@ -1,5 +1,3 @@
-import { Outlet } from "react-router-dom"
-
 const Content = () => {
     return (
         <div className="w-full lg:flex-1 bg-gray-600 mt-14">
