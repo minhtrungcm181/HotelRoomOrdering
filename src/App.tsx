@@ -6,11 +6,14 @@ import Breakfast from './pages/Breakfast'
 import Lunch from './pages/Lunch'
 import Dinner from './pages/Dinner'
 import Navbar from './Components/Navbar'
+import "bootstrap/dist/css/bootstrap.css"
+import { ShoppingCartProvider } from './context/ShoppingCartContext'
 
 
 function App() {
   return (
     <div className="flex flex-col lg:flex-row lg:min-h-screen">
+      <ShoppingCartProvider>
        <BrowserRouter>
         <Navbar />
         <Routes>
@@ -18,7 +21,7 @@ function App() {
           <Route path="/breakfast" element={<Breakfast />}/>
         </Routes>
       </BrowserRouter>
-
+      </ShoppingCartProvider>
     </div>
   );
 }

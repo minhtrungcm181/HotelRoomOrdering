@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.Card{
+    border-radius: 5px 10px;
+    border: solid black;
+    font-family: "Pacifico";
+    font-size: 20px;
+}
+
+.description{
+    font-size:smaller;
+}
+.title{
+    font-family: "Pacifico";
+}
+.thumb{
+    max-width: 100%;
+}

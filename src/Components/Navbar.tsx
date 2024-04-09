@@ -1,6 +1,8 @@
 import logo_hotel1 from"../assets/logo_hotel1.jpg"
 import { FaShoppingCart } from "react-icons/fa";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 const Navbar = () =>{ 
+  const {openCart, cartQuantity} = useShoppingCart()
     return( 
     <>
     <nav className="navbar navbar-expand-sm bg-body-tertiary">
@@ -14,7 +16,7 @@ const Navbar = () =>{
       <div className="collapse navbar-collapse mt-auto" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">About</a>
@@ -24,12 +26,11 @@ const Navbar = () =>{
           </li>
           
         </ul>
-        <form className="d-flex align-items-center nav_last" role="cart">
-             <FaShoppingCart size="30px" />
-          <button className="btn1" type="button" >
+       
+          <button className="btn1" type="button" onClick={openCart}>
             Order
           </button>
-        </form>
+     
       </div>
     </div>
   </nav>
