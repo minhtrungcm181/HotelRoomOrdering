@@ -30,15 +30,7 @@ const FoodCard = ({id, foodTitle, foodPrice, foodDescription, foodThumb}:FoodIte
        <div className='mt-auto'>
         {quantity === 0 ? (
           <button className="w-20" onClick={() => increaseCartQuantity(id) }> Add to cart </button>
-        ): <div className="d-flex align-items-center flex-column" style={{gap: ".5rem"}}>
-          <div className="d-flex align-items-center justify-content-center" style={{gap: ".5rem"}}>
-          <button onClick={() => decreaseCartQuantity(id)}>-</button>
-          <span className="fs-3">{quantity}</span>
-          <button onClick={() => increaseCartQuantity(id)}>+</button>
-          </div>
-          <button onClick={() => removeFromCart(id)}> remove </button>
-           </div>
-           
+        ): <button className= "remove-btn"onClick={() => removeFromCart(id)}> remove </button>
            }
        </div>
       </div>

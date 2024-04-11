@@ -8,14 +8,13 @@ type ShoppingCartProviderProps ={
     children:ReactNode
 }
 type ShoppingCartContext = {
-    openCart: () => void
-    closeCart: () => void
     cartQuantity: number
     cartItems: CartItem[]
     getItemQuantity: (id: number) => number
     increaseCartQuantity: (id: number) => void
     decreaseCartQuantity: (id: number) => void
     removeFromCart: (id: number) => void
+    
 }
 type CartItem = {
     id:number
@@ -65,6 +64,7 @@ function decreaseCartQuantity(id:number){
                 return currItems.map(item => {
 
                     if(item.id === id){
+                        if(item.quantity === 1) return {...item, quantity:1}
                         return {...item, quantity: item.quantity - 1}
                     }
                     
@@ -86,8 +86,6 @@ function decreaseCartQuantity(id:number){
         decreaseCartQuantity, 
         removeFromCart,
         cartItems,
-        openCart, 
-        closeCart,
         cartQuantity
         }}>
         {children}

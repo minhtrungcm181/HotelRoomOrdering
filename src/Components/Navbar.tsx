@@ -1,8 +1,14 @@
 import logo_hotel1 from"../assets/logo_hotel1.jpg"
 import { FaShoppingCart } from "react-icons/fa";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () =>{ 
-  const {openCart, cartQuantity} = useShoppingCart()
+  const navigate = useNavigate();
+  const directTo = () => {
+    navigate(`/cart`);
+  };
+  
     return( 
     <>
     <nav className="navbar navbar-expand-sm bg-body-tertiary">
@@ -27,7 +33,7 @@ const Navbar = () =>{
           
         </ul>
        
-          <button className="btn1" type="button" onClick={openCart}>
+          <button className="btn1"onClick={directTo}>
             Order
           </button>
      

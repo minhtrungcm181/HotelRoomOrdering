@@ -1,23 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {FOOD_API} from '../constants/const';
 import axios from "axios";
 import FoodCard from "./FoodCard";
-import getDB from "../Firebase/Firebase";
-import { child, get, ref } from "firebase/database";
+import { ItemContext, useItemContext } from "../context/ItemContext";
+
 
 const FoodList = () => {
-    const [foodList, setFoodList] = useState([{}]);
   
-    const dbRef = ref(getDB)
-    get(child(dbRef, `foodcard`)).then((snapshot) => {
-      if(snapshot.exists()){
-        setFoodList(snapshot.val())
-      }
-      else {console.log("Nothing")}
-    })
-    .catch((error) => {console.log(error)})
-    
-  
+
+  const {foodList} = useItemContext()
   
     return (
       <div className="container">

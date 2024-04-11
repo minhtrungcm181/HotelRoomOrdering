@@ -1,0 +1,13 @@
+.price{
+    font-size: larger;
+}
+.button{
+    padding: 1rem !important;
+    border-radius: 5px 10px;
+    border: solid black;
+    font-family: "Pacifico";
+    font-size: 40px;
+}
+.remove-btn{
+    color: red;
+}
