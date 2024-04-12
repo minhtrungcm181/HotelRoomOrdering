@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import { ShoppingCartProvider } from './context/ShoppingCartContext'
 import { ItemContext, ItemProvider } from './context/ItemContext'
 import ShoppingCart from './pages/ShoppingCart'
+import Checkout from './pages/Checkout'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/breakfast" element={<Breakfast />}/>
           <Route path="/cart" element={<ShoppingCart/>} />
+          <Route path="/check-out" element ={<Checkout/>}/>
         </Routes>
       </BrowserRouter>
       </ItemProvider>

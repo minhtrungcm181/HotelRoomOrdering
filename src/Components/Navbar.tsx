@@ -13,7 +13,7 @@ const Navbar = () =>{
     <>
     <nav className="navbar navbar-expand-sm bg-body-tertiary">
     <div className="container Nav_main">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/">
         <img src={logo_hotel1} alt = "" width="80" height="80"/>
       </a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

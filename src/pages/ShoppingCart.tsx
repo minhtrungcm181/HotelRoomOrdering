@@ -2,11 +2,19 @@ import CartItem from "../Components/CartItem"
 import { useItemContext } from "../context/ItemContext"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../ultilities/formatCurrency"
+import { FaArrowRight } from "react-icons/fa";
 import'./Cart.css'
+import MomoConfig from "../Payment/MomoConfig";
+import { Payment } from "../Payment/Payment";
 
 const ShoppingCart = () => {
     const {cartItems} = useShoppingCart()
     const {foodList} = useItemContext()
+    const Checkout = () =>{
+        MomoConfig(totalMoney)
+
+    };
+    var totalMoney: any
 return(
     <div className="container">
         <p className="h1">Cart</p>
@@ -22,13 +30,17 @@ return(
                 formatCurrency(cartItems.reduce(
                     (total, cartItem) => {
                         const item = foodList.find(i => i.id === cartItem.id)
-                        return total + (item?.foodPrice || 0) * cartItem.quantity
+                        totalMoney = total + (item?.foodPrice || 0) * cartItem.quantity
+                        return totalMoney
                     }, 0
                 ))
             }</div>
         </div>
        <div className="Payment">
-        <button>Payment</button>
+        <button onClick={Checkout}>
+            Checkout 
+            <FaArrowRight/>
+        </button>
        </div>
     </div>
 )
